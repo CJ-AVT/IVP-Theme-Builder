@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Starter Template - Materialize</title>
+
+    <script src="https://vjs.zencdn.net/7.11.4/video.min.js"></script>
+
+    <!-- CSS  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="https://unpkg.com/video.js@7/dist/video-js.min.css" rel="stylesheet" />
+    <link href="./styles.css" rel="stylesheet" />
+    <link href="css/base.css" rel="stylesheet" />
+    <link href="css/city.css" rel="stylesheet" />
+    <link href="css/fantasy.css" rel="stylesheet" />
+    <link href="css/forest.css" rel="stylesheet" />
+    <link href="css/sea.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- <nav class="light-blue lighten-1" role="navigation">
+      <div class="nav-wrapper container">
+        <a id="logo-container" href="#" class="brand-logo">Logo</a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="#">Navbar Link</a></li>
+        </ul>
+
+        <ul id="nav-mobile" class="sidenav">
+          <li><a href="#">Navbar Link</a></li>
+        </ul>
+        <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      </div>
+    </nav> -->
+    <div class="section no-pad-bot" id="index-banner">
+      <!--1st Level-->
+      <div class="container">
+        <h1 class="header center orange-text">Video.js Theme Changer</h1>
+        <div class="row center">
+          <h5 class="header col s12 light">A tool to edit and change Video.js themes.</h5>
+        </div>
+        <!--2nd Level-->
+        <div id="main-container">
+          <!--3rd Level - Part 1-->
+          <div id="video-option-changer">
+            <div class="selection" style="height: 120px">
+              <div class="selection--title">Themes</div>
+              <div class="selection--body" style="position: relative; top: -30px">
+                <select id="theme-selector" class="selector" title="theme selector" onchange="changeTheme(this.value)">
+                  <option value="base">Base</option>
+                  <option value="city">City</option>
+                  <option value="fantasy">Fantasy</option>
+                  <option value="forest">Forest</option>
+                  <option value="sea">Sea</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="selection">
+              <div class="selection--title">Button Sizing & Load Spinning</div>
+              <div class="selection--body">
+                <!--Button Sizing & Load Spinning - Option 1-->
+                <div class="option-container">
+                  <p class="option-text">Pick a color:</p>
+                  <input class="hex-input" type="text" placeholder="#e66465" />
+                  <input type="color" id="color-wheel-play-button" name="head" value="#e66465" onclick="setHexValuePlayButton()" />
+                </div>
+
+                <!--Button Sizing & Load Spinning - Option 2-->
+                <div class="option-container">
+                  <br />
+                  <p class="option-text">Default range slider:</p>
+                  <input id="slider-1" type="range" min="1" max="10" value="1" step="0.5" oninput="setButtonSize()" />
+                  <input id="slider-counter-1" type="text" value="1" oninput="setButtonSize()" />
+                </div>
+
+                <!--Button Sizing & Load Spinning - Option 3-->
+                <div class="option-container">
+                  <br />
+                  <p class="option-text">Play button roundness:</p>
+                  <input id="slider-2" type="range" min="0" max="2" value="0.3" step="0.1" oninput="setButtonRoundness()" />
+                  <input id="slider-counter-2" type="text" placeholder="0.3" oninput="setButtonRoundness()" />
+                </div>
+              </div>
+            </div>
+
+            <div class="selection" style="height: 500px">
+              <div class="selection--title">Controls</div>
+              <div class="selection--body">
+                <!--Controls - Option 1-->
+                <div class="option-container">
+                  <p class="option-text">Button controls size:</p>
+                  <input id="slider-3" type="range" min="1" max="30" value="10" step="1" oninput="setControlFontSize()" />
+                  <input id="slider-counter-3" type="text" placeholder="10" oninput="setControlFontSize()" />
+                </div>
+
+                <!--Button Sizing & Load Spinning - Option 1-->
+                <div class="option-container">
+                  <p class="option-text">Pick a color:</p>
+                  <input class="hex-input" type="text" placeholder="#e66465" style="position: relative; top: 15px" />
+                  <input type="color" id="color-wheel-controls" name="head" value="#e66465" onclick="setHexValueControls()" />
+                </div>
+
+                <!--Controls - Option 2-->
+                <div class="my-tickbox">
+                  <br />
+                  <br />
+                  <span class="my-tickbox-text">Fullscreen</span>
+                  <span class="my-tickbox-checkbox" onclick="setFullscreen(this)"></span>
+                  <br />
+                  <span class="my-tickbox-text">Playback</span>
+                  <span class="my-tickbox-checkbox" onclick="setPlayback(this)"></span>
+                  <br />
+                  <span class="my-tickbox-text">Chapters</span>
+                  <span class="my-tickbox-checkbox" onclick="setChapters(this)"></span>
+                  <br />
+                  <span class="my-tickbox-text">Description</span>
+                  <span class="my-tickbox-checkbox" onclick="setDescriptions(this)"></span>
+                  <br />
+                  <span class="my-tickbox-text">Subtitles</span>
+                  <span class="my-tickbox-checkbox" onclick="setSubtitles(this)"></span>
+                  <br />
+                  <span class="my-tickbox-text">Audio</span>
+                  <span class="my-tickbox-checkbox" onclick="setAudio(this)"></span>
+                  <br />
+                  <span class="my-tickbox-text">Picture in Picture</span>
+                  <span class="my-tickbox-checkbox" onclick="setPictureInPicture(this)"></span>
+                  <br />
+                  <span class="my-tickbox-text">Remaining Time</span>
+                  <span class="my-tickbox-checkbox" onclick="setRemainingTime(this)"></span>
+                  <br />
+                  <span class="my-tickbox-text">Seek to Live</span>
+                  <span class="my-tickbox-checkbox" onclick="setSeekToLive(this)"></span>
+                  <br />
+                  <span class="my-tickbox-text">Progress Bar</span>
+                  <span class="my-tickbox-checkbox" onclick="setProgressBar(this)"></span>
+                  <br />
+                  <span class="my-tickbox-text">Duration</span>
+                  <span class="my-tickbox-checkbox" onclick="setDuration(this)"></span>
+                  <br />
+                  <span class="my-tickbox-text">Current Time</span>
+                  <span class="my-tickbox-checkbox" onclick="setCurrentTime(this)"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--3rd Level - Part 2-->
+          <!--Add a div to contain the video and a css outputter underneath-->
+          <div id="video-and-css">
+            <video
+              id="my_video"
+              class="video-js vjs-theme-fantasy"
+              width="640px"
+              height="367px"
+              controls
+              preload="none"
+              poster="./black_background.png"
+              data-setup='{ "aspectRatio":"640:367", "playbackRates": [1, 1.5, 2] }'
+            >
+              <source src="https://vjs.zencdn.net/v/oceans.mp4" type="video/mp4" />
+            </video>
+            <div id="css-output">
+              <button id="minify-button" class="css-output-button" onclick="minifyCSS()">Minify CSS</button>
+              <button id="download-button" class="css-output-button" onclick="downloadCSS()">Download</button>
+              <button id="copy-button" class="css-output-button" onclick="copyCSSToClipboard()">Copy</button>
+              <textarea id="css-output-text" rows="12"></textarea>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 
+    <footer class="page-footer orange">
+      <div class="footer-copyright">
+        <div class="container">
+          Made by
+          <a class="orange-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+        </div>
+      </div>
+    </footer> -->
+
+    <!--  Scripts-->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="js/materialize.js"></script>
+    <script src="./js/select_theme.js"></script>
+    <script src="./js/css_text_interactions.js"></script>
+    <script src="./js/setUnminifiedJS.js"></script>
+    <script src="./js/setHexValue.js"></script>
+    <script src="./js/setButtonSize.js"></script>
+    <script src="./js/setButtonRoundness.js"></script>
+    <script src="./js/setControlFontSize.js"></script>
+    <script src="./js/setToggleTickboxState.js"></script>
+    <script src="./js/setControls.js"></script>
+
+    <style>
+      /* Show the controls (hidden at the start by default) */
+      .video-js .vjs-control-bar {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+      }
+
+      /* Make the demo a little prettier */
+      body {
+        background: #222;
+        text-align: center;
+        color: #aaa;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        background: radial-gradient(#333, hsl(200, 30%, 6%));
+      }
+    </style>
+  </body>
+</html>

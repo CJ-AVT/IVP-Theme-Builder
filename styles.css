@@ -1,0 +1,224 @@
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+textarea {
+  height: auto;
+}
+
+.selector {
+  margin-top: 40px;
+  display: block;
+  color: grey;
+  border-radius: 10px;
+  border: 2px solid grey;
+}
+
+#my_video {
+  margin-left: 20px;
+}
+
+#css-output-text {
+  margin-left: 20px;
+  width: 50vw;
+  background-color: #ffffff;
+  height: 300px;
+}
+
+#css-output {
+  margin-top: 50px !important;
+}
+
+.css-output-button {
+  float: right;
+  width: 100px;
+  height: 40px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  position: relative;
+  left: 20px;
+}
+
+#slider-1 {
+  left: 0;
+  width: 80%;
+  float: left;
+}
+
+#slider-2 {
+  left: 0;
+  width: 80%;
+  float: left;
+}
+
+#slider-3 {
+  left: 0;
+  width: 80%;
+  float: left;
+}
+
+#slider-counter-1 {
+  border: solid 1px black;
+  height: 30px;
+  width: 10%;
+  float: right;
+  padding-left: 15px;
+}
+
+#slider-counter-2 {
+  border: solid 1px black;
+  height: 30px;
+  width: 10%;
+  float: right;
+  padding-left: 15px;
+}
+
+#slider-counter-3 {
+  border: solid 1px black;
+  height: 30px;
+  width: 10%;
+  float: right;
+  padding-left: 15px;
+}
+
+.option-text {
+  position: relative;
+  height: 0px;
+  text-align: left;
+  color: black;
+}
+
+.hex-input {
+  border: solid 1px black !important;
+  margin-top: 10px !important;
+  height: 30px !important;
+  width: 80% !important;
+  float: left !important;
+}
+
+#color-wheel-play-button {
+  position: relative !important;
+  top: 15px !important;
+  left: 5px;
+}
+
+#color-wheel-controls {
+  position: relative !important;
+  top: 25px !important;
+  left: 5px;
+}
+
+#copy-button {
+  background-color: rgb(37, 197, 72);
+}
+
+#download-button {
+  background-color: rgb(6, 170, 199);
+}
+
+#minify-button {
+  background-color: rgb(253, 79, 48);
+}
+
+#video-and-css {
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+}
+
+/* Footer */
+.page-footer.orange {
+  position: absolute;
+  bottom: 0;
+}
+
+#main-container {
+  display: flex;
+}
+
+.selection {
+  width: 300px;
+  height: 350px;
+  background: white;
+  margin: 0 0 1em;
+  border-radius: 5px;
+}
+
+.selection--title {
+  display: flex;
+  background: black;
+  height: 2rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px 5px 0 0;
+}
+
+.selection--body {
+  padding: 15px;
+}
+
+#color-picker {
+  display: inline-block;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+}
+
+#color-picker label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+#color-picker input[type="color"] {
+  height: 30px;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+}
+
+#color-picker input[type="submit"] {
+  display: block;
+  margin-top: 10px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4caf50;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#color-picker input[type="submit"]:hover {
+  background-color: #3e8e41;
+}
+
+/*----- Tickbox styles -----*/
+
+.my-tickbox {
+  margin-top: 20px;
+}
+
+.my-tickbox-checkbox {
+  width: 20px;
+  height: 20px;
+  margin-left: 5px;
+  border: 1px solid green;
+  border-radius: 3px;
+  position: relative;
+  float: right;
+}
+
+.my-tickbox-text {
+  float: left;
+}
+
+.my-tickbox-checkbox.checked {
+  background-color: green;
+}
